@@ -9,8 +9,9 @@
 소스 코드에 대한 암복화를 위한 명령어는 다음과 같습니다.
 
 ## 암/복호화 엔진 활성화
-$ vault secrets enable transit
-
+<code>
+  $ vault secrets enable transit
+</code>
 
 ## 암/복호화 키 생성
 $ vault write -f transit/keys/code_java
