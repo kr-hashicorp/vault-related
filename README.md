@@ -30,7 +30,10 @@ $ vault write --field=ciphertext transit/encrypt/code_java plaintext=$(base64 -i
 데모 목적으로 base64로 인코드된 복호화 파일 생성
 
 <code>
-$ vault write transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext <p>
-$ vault write -field=plaintext transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext > TransitUtil.java_base64_text <p>
+$ vault write transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext 
+  </code>
+  <code>
+$ vault write -field=plaintext transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext > TransitUtil.java_base64_text 
+  </code><code>
 $ base64 -i TransitUtil.java_base64_text -o TransitUtil.java_decode --decode
 </code>
