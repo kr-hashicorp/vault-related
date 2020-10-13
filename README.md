@@ -22,7 +22,7 @@ $ vault write -f transit/keys/code_java
 데모 목적으로 암호화 파일을 생성.
 
 <code>
-$ vault write transit/encrypt/code_java plaintext=$(base64 -i TransitUtil.java) <br>
+$ vault write transit/encrypt/code_java plaintext=$(base64 -i TransitUtil.java) <p>
 $ vault write --field=ciphertext transit/encrypt/code_java plaintext=$(base64 -i TransitUtil.java) > TransitUtil.java_ciphertext
 </code>
 
