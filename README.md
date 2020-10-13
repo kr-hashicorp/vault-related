@@ -32,8 +32,10 @@ $ vault write --field=ciphertext transit/encrypt/code_java plaintext=$(base64 -i
 <code>
 $ vault write transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext 
   </code>
-  <code>
+ 
+ <code>
 $ vault write -field=plaintext transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext > TransitUtil.java_base64_text 
-  </code><code>
+ </code>
+ <code>
 $ base64 -i TransitUtil.java_base64_text -o TransitUtil.java_decode --decode
 </code>
