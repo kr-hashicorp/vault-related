@@ -20,6 +20,7 @@ $ vault write -f transit/keys/code_java
 
 ## 소스 코드 암호화
 데모 목적으로 암호화 파일을 생성.
+
 <code>
 $ vault write transit/encrypt/code_java plaintext=$(base64 -i TransitUtil.java)
 $ vault write --field=ciphertext transit/encrypt/code_java plaintext=$(base64 -i TransitUtil.java) > TransitUtil.java_ciphertext
@@ -27,6 +28,7 @@ $ vault write --field=ciphertext transit/encrypt/code_java plaintext=$(base64 -i
 
 ## 소스 코드 복호화
 데모 목적으로 base64로 인코드된 복호화 파일 생성
+
 <code>
 $ vault write transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext
 $ vault write -field=plaintext transit/decrypt/code_java ciphertext=@TransitUtil.java_ciphertext > TransitUtil.java_base64_text
